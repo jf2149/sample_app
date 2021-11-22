@@ -5,7 +5,7 @@ class TodolistsController < ApplicationController
   end
 
   def create
-     @list = List.new(list_params)
+    @list = List.new(list_params)
     if @list.save
       redirect_to todolist_path(@list.id)
     else
